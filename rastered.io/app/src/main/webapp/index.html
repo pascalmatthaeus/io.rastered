@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rastered.io</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <script>
+            var image;
+            var imgBase="filter?valGam=";
+            function count(){
+                var x = document.getElementById('valueGam').value;
+                var y = document.getElementById('valueExp').value;
+                var z = document.getElementById('valueSli').value;
+                
+                image.src = imgBase+x+"&valExp="+y+ "&valSli="+z+"&" + new Date().getTime();
+            }
+
+            function init(){
+                image = document.getElementById("image");
+
+                if( image ){
+                    setInterval("count()",468);
+                }
+            }
+            window.onload = init;
+        </script>
+    </head>
+    
+    <body>
+        <form>
+            Gamma: <input type="text" name="valGam" id="valueGam" size="20">
+            Exposure: <input type="text" name="valExp" id="valueExp" size="20">
+	</form>
+        <input type="range" min="1" max="100" value="50" class="slider" id="valueSli">
+        <div><img src="filter?valGam=0&valExp=0" id="image"></div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <video id="video" autoplay muted></video>
+        <script>
+          if(Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+            hls.loadSource('http://127.0.0.1/hls');
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                video.currentTime = video.duration-1;
+                video.play();
+          });
+         }
+         // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+         // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) dire>
+         // This is using the built-in support of the plain video element, without using hls.js.
+          else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = 'http://127.0.0.1/hls';
+            video.addEventListener('canplay',function() {
+                    video.currentTime = video.duration-1;
+                    video.play();
+                    video.currentTime = video.duration-1;
+                    video.oncanplay = function() {
+                        video.play();
+                        video.currentTime = video.duration - 1;
+                    }
+                    video.media.addEventListener('playing',function(){
+                        video.currentTime(video.duration-1);
+                    })
+            });
+          }
+        </script>
+        
+    </body>
+    
+</html>

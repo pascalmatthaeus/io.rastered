@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="/home/sk/Documents/rastered.io/app/target/app-0.1" path="">
+  <CookieProcessor sameSiteCookies="none"/>
+</Context>
