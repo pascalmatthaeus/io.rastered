@@ -109,9 +109,9 @@
 					<Name>192.168.188.38</Name>
 				</Names>
 				<TLS>
-					<CertPath>/opt/ovenmediaengine/bin/cert1.pem</CertPath>
-					<KeyPath>/opt/ovenmediaengine/bin/privkey1.pem</KeyPath>
-					<ChainCertPath>/opt/ovenmediaengine/bin/fullchain1.pem</ChainCertPath>
+					<CertPath>/opt/ovenmediaengine/bin/cert2.pem</CertPath>
+					<KeyPath>/opt/ovenmediaengine/bin/privkey2.pem</KeyPath>
+					<ChainCertPath>/opt/ovenmediaengine/bin/fullchain2.pem</ChainCertPath>
 				</TLS>
 			</Host>
 

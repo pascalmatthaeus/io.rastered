@@ -14,27 +14,36 @@ import Sidebar from "./components/Sidebar";
 import { AppViewport, GlobalTheme } from "./components/viewport";
 
 function App() {
-  useEffect(() => {
-    /*const response = fetch(
-      "http://127.0.0.1:8080/filter?valGam=100&valExp=100&valSli=100",
-      { credentials: "include" }
-    );*/
+  useEffect( () => {
+    async function createPlayerData() {
+		async function setSource() {
+			const response = await fetch("https://app.rastered.io/filter",
+				{credentials:"include"});
+			const responseJson = await response.json();
+			const sk = await responseJson.streamKey;
+			let webrtcSources = await [
+			  {
+				type: "webrtc",
+				file: "wss://stream.rastered.io:3334/app/stream"+sk,
+				label: "Viewport",
+			  },
+			];
+			return webrtcSources;
+		}
+		const webrtcSources = await setSource();
 
-    let webrtcSources = [
-      {
-        type: "webrtc",
-        file: "ws://127.0.0.1:3333/app/stream",
-        label: "Viewport",
-      },
-    ];
-
-    let op = document.querySelector("#player_id");
-    let player = window.OvenPlayer.create(op, {
-      sources: webrtcSources,
-      autoStart: true,
-      mute: true,
-      controls: false,
-    });
+		let op = await document.querySelector("#player_id");
+		let player = await window.OvenPlayer.create(op, {
+		  sources: webrtcSources,
+		  autoStart: true,
+		  mute: true,
+		  controls: false,
+		});
+		
+		console.log(webrtcSources);
+	}
+	createPlayerData();
+	
   });
   return (
     <React.Fragment>

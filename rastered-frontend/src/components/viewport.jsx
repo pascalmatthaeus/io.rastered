@@ -63,22 +63,10 @@ export const AppViewport = (props) => {
     <Viewport>
       <p>
         <FilterDetails />
-        {/*<FilterDetails />
-        <FilterDetails />
-        <FilterDetails />*/}
-        {/*FILTERA
-      <ParamSlider type="range" min="1" max="100" />
-      FILTERA
-      <ParamSlider type="range" min="1" max="100" />
-      FILTERA
-      <ParamSlider type="range" min="1" max="100" />
-      FILTERA
-      <ParamSlider type="range" min="1" max="100" />*/}
       </p>
       <p>
         <DocumentCard>
           <VideoPlayer />
-          {/*<VpImage src={props.imgsrc} />*/}
         </DocumentCard>
       </p>
     </Viewport>

@@ -105,15 +105,18 @@ public class FilterServlet extends HttpServlet {
                 valueSli = 100;
             }
             
-            //response.setContentType("image/jpeg");
-            response.setContentType("application/json");
-            response.setCharacterEncoding("utf-8");
-            response.getWriter().print((Json.createObjectBuilder().add(
-                    "streamKey", "test")//(String)session.getAttribute("streamkey"))
-                    .build()
-                    .toString()));
-            //response.setContentType("text/html");
-            
+            Integer sk = (Integer)session.getAttribute("streamkey");
+            if (sk != null) 
+            {
+                response.setContentType("application/json");
+                response.setCharacterEncoding("utf-8");
+                response.getWriter().print((Json.createObjectBuilder().add(
+                        "streamKey", sk.toString())//(String)session.getAttribute("streamkey"))
+                        .build()
+                        .toString()));
+                //response.setContentType("text/html");
+            }
+                    
             synchronized(this) 
             {
                 sessionImPro.reset();

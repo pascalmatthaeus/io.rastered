@@ -14,9 +14,9 @@ const VidPlayerStyled = styled.div`
 `;
 
 export const VideoPlayer = (props) => {
-  return (
-    <VidPlayerContainer>
-      <VidPlayerStyled id="player_id" />
-    </VidPlayerContainer>
-  );
+	return (
+		<VidPlayerContainer>
+		  <VidPlayerStyled id="player_id" />
+		</VidPlayerContainer>
+	);
 };
