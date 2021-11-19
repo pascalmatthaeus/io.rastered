@@ -1,0 +1,800 @@
+19-Nov-2021 17:52:52.435 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:52:52.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 17:52:52.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 17:52:52.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 17:52:52.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 17:52:52.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 17:52:52.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 17:52:52.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:52:52.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:52:52.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 17:52:52.447 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 17:52:52.641 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:52:52.660 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [359] milliseconds
+19-Nov-2021 17:52:52.698 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 17:52:52.698 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 17:52:52.703 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 17:52:52.711 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 17:52:52.861 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 17:52:52.896 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [192] ms
+19-Nov-2021 17:52:52.897 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 17:52:52.925 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [28] ms
+19-Nov-2021 17:52:52.925 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 17:52:52.947 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [22] ms
+19-Nov-2021 17:52:52.947 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 17:52:53.084 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [137] ms
+19-Nov-2021 17:52:53.084 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 17:52:53.099 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [15] ms
+19-Nov-2021 17:52:53.101 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:52:53.108 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [447] milliseconds
+19-Nov-2021 17:53:40.260 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 17:53:40.261 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:53:40.267 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 17:53:40.286 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:53:40.317 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:53:58.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 17:53:58.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 17:53:58.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 17:53:58.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 17:53:58.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 17:53:58.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 17:53:58.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 17:53:58.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 17:53:58.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 17:53:58.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:53:58.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:53:58.240 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 17:53:58.240 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 17:53:58.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 17:53:58.242 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:53:58.242 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 17:53:58.242 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 17:53:58.243 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 17:53:58.445 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:53:58.461 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [376] milliseconds
+19-Nov-2021 17:53:58.483 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 17:53:58.484 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 17:53:58.489 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 17:53:58.501 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 17:53:58.654 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 17:53:58.691 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [201] ms
+19-Nov-2021 17:53:58.691 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 17:53:58.730 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [38] ms
+19-Nov-2021 17:53:58.730 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 17:53:58.761 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [30] ms
+19-Nov-2021 17:53:58.761 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 17:53:58.912 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [151] ms
+19-Nov-2021 17:53:58.913 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 17:53:58.928 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [15] ms
+19-Nov-2021 17:53:58.931 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:53:58.940 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [479] milliseconds
+19-Nov-2021 17:54:35.056 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 17:54:35.056 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:54:35.062 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 17:54:35.083 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 17:54:35.109 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:05:56.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 18:05:56.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 18:05:56.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 18:05:56.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 18:05:56.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 18:05:56.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 18:05:56.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 18:05:56.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 18:05:56.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 18:05:56.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:05:56.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:05:56.683 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 18:05:56.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:05:56.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:05:56.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 18:05:56.686 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 18:05:56.902 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:05:56.924 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [404] milliseconds
+19-Nov-2021 18:05:56.950 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 18:05:56.950 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 18:05:56.955 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 18:05:56.964 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 18:05:57.122 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 18:05:57.155 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [199] ms
+19-Nov-2021 18:05:57.156 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 18:05:57.184 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [28] ms
+19-Nov-2021 18:05:57.184 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 18:05:57.206 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [22] ms
+19-Nov-2021 18:05:57.206 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 18:05:57.326 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [120] ms
+19-Nov-2021 18:05:57.326 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 18:05:57.336 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [10] ms
+19-Nov-2021 18:05:57.338 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:05:57.347 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [422] milliseconds
+19-Nov-2021 18:07:03.488 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 18:07:03.488 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:07:03.489 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 18:07:03.502 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:07:03.541 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:38:26.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 18:38:26.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 18:38:26.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:38:26.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:38:26.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 18:38:26.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 18:38:26.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:38:26.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:38:26.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 18:38:26.674 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 18:38:26.850 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:38:26.865 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [304] milliseconds
+19-Nov-2021 18:38:26.887 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 18:38:26.888 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 18:38:26.892 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 18:38:26.900 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 18:38:27.033 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 18:38:27.059 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [166] ms
+19-Nov-2021 18:38:27.059 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 18:38:27.079 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [20] ms
+19-Nov-2021 18:38:27.080 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 18:38:27.101 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [21] ms
+19-Nov-2021 18:38:27.102 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 18:38:27.218 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [116] ms
+19-Nov-2021 18:38:27.219 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 18:38:27.232 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [14] ms
+19-Nov-2021 18:38:27.234 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:38:27.241 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [375] milliseconds
+19-Nov-2021 18:38:49.601 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 18:38:49.602 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:38:49.609 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 18:38:49.630 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:38:49.661 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:47:15.859 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 18:47:15.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 18:47:15.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:47:15.864 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:47:15.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 18:47:15.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 18:47:15.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 18:47:15.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:47:15.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:47:15.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 18:47:15.876 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 18:47:16.112 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:47:16.129 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [389] milliseconds
+19-Nov-2021 18:47:16.151 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 18:47:16.151 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 18:47:16.156 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 18:47:16.164 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 18:47:16.307 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 18:47:16.333 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [177] ms
+19-Nov-2021 18:47:16.334 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 18:47:16.354 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [20] ms
+19-Nov-2021 18:47:16.355 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 18:47:16.382 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [28] ms
+19-Nov-2021 18:47:16.383 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 18:47:16.531 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [148] ms
+19-Nov-2021 18:47:16.532 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 18:47:16.547 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [16] ms
+19-Nov-2021 18:47:16.550 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:47:16.559 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [430] milliseconds
+19-Nov-2021 18:47:58.264 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 18:47:58.264 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:47:58.271 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 18:47:58.282 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:47:58.318 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:49:10.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 18:49:10.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 18:49:10.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 18:49:10.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 18:49:10.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 18:49:10.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 18:49:10.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 18:49:10.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 18:49:10.628 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 18:49:10.628 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:49:10.628 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:49:10.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 18:49:10.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 18:49:10.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 18:49:10.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 18:49:10.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 18:49:10.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 18:49:10.638 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 18:49:10.638 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 18:49:10.638 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 18:49:10.638 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 18:49:10.638 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 18:49:10.638 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:49:10.638 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 18:49:10.639 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 18:49:10.640 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 18:49:10.855 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:49:10.873 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [374] milliseconds
+19-Nov-2021 18:49:10.900 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 18:49:10.901 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 18:49:10.907 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 18:49:10.916 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 18:49:11.099 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 18:49:11.135 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [229] ms
+19-Nov-2021 18:49:11.136 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 18:49:11.162 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [25] ms
+19-Nov-2021 18:49:11.162 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 18:49:11.184 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [22] ms
+19-Nov-2021 18:49:11.185 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 18:49:11.310 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [125] ms
+19-Nov-2021 18:49:11.310 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 18:49:11.321 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [11] ms
+19-Nov-2021 18:49:11.326 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 18:49:11.333 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [459] milliseconds
+19-Nov-2021 19:00:10.206 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:00:10.207 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:00:10.208 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:00:10.209 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [12] instance(s) to be deallocated for Servlet [FilterServlet]
+19-Nov-2021 19:00:10.538 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:00:10.563 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:02:54.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:02:54.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:02:54.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:02:54.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:02:54.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:02:54.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:02:54.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:02:54.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:02:54.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:02:54.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:02:54.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:02:54.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:02:54.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:02:54.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:02:54.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:02:54.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:02:54.942 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:02:55.139 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:02:55.155 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [371] milliseconds
+19-Nov-2021 19:02:55.179 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:02:55.179 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:02:55.184 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:02:55.192 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:02:55.339 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:02:55.367 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [183] ms
+19-Nov-2021 19:02:55.368 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:02:55.397 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [28] ms
+19-Nov-2021 19:02:55.397 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:02:55.420 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [23] ms
+19-Nov-2021 19:02:55.420 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:02:55.550 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [130] ms
+19-Nov-2021 19:02:55.550 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:02:55.568 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [18] ms
+19-Nov-2021 19:02:55.572 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:02:55.583 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [427] milliseconds
+19-Nov-2021 19:03:40.093 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:03:40.093 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:03:40.094 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:03:40.112 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:03:40.146 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:04:38.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:04:38.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:04:38.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:04:38.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:04:38.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:04:38.017 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:04:38.017 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:04:38.017 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:04:38.017 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:04:38.218 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:04:38.234 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [339] milliseconds
+19-Nov-2021 19:04:38.259 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:04:38.259 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:04:38.263 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:04:38.271 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:04:38.415 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:04:38.445 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [181] ms
+19-Nov-2021 19:04:38.445 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:04:38.467 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [22] ms
+19-Nov-2021 19:04:38.467 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:04:38.492 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [24] ms
+19-Nov-2021 19:04:38.492 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:04:38.645 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [153] ms
+19-Nov-2021 19:04:38.646 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:04:38.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [18] ms
+19-Nov-2021 19:04:38.667 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:04:38.673 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [438] milliseconds
+19-Nov-2021 19:08:09.007 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:08:09.007 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:08:09.008 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:08:09.009 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [17] instance(s) to be deallocated for Servlet [FilterServlet]
+19-Nov-2021 19:08:09.565 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:08:09.617 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:09:28.427 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:09:28.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:09:28.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:09:28.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:09:28.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:09:28.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:09:28.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:09:28.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:09:28.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:09:28.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:09:28.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:09:28.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:09:28.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:09:28.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:09:28.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:09:28.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:09:28.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:09:28.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:09:28.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:09:28.441 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:09:28.638 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:09:28.654 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [353] milliseconds
+19-Nov-2021 19:09:28.682 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:09:28.682 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:09:28.688 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:09:28.698 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:09:28.872 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:09:28.907 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [218] ms
+19-Nov-2021 19:09:28.908 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:09:28.937 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [29] ms
+19-Nov-2021 19:09:28.937 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:09:28.962 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [25] ms
+19-Nov-2021 19:09:28.962 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:09:29.092 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [129] ms
+19-Nov-2021 19:09:29.092 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:09:29.107 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [15] ms
+19-Nov-2021 19:09:29.109 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:09:29.116 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [462] milliseconds
+19-Nov-2021 19:14:15.640 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:14:15.641 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:14:15.647 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:14:15.662 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:14:15.696 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:18:04.746 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:18:04.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:18:04.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:18:04.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:18:04.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:18:04.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:18:04.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:18:04.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:18:04.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:18:04.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:18:04.759 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:18:04.952 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:18:04.970 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [327] milliseconds
+19-Nov-2021 19:18:04.999 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:18:04.999 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:18:05.007 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:18:05.017 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:18:05.194 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:18:05.220 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [212] ms
+19-Nov-2021 19:18:05.220 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:18:05.245 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [25] ms
+19-Nov-2021 19:18:05.245 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:18:05.269 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [24] ms
+19-Nov-2021 19:18:05.269 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:18:05.397 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [128] ms
+19-Nov-2021 19:18:05.398 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:18:05.412 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [15] ms
+19-Nov-2021 19:18:05.414 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:18:05.421 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [450] milliseconds
+19-Nov-2021 19:29:14.307 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:29:14.308 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:29:14.314 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:29:14.336 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:29:14.367 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:29:22.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:29:22.864 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:29:22.864 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:29:22.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:29:22.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:29:22.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:29:22.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:29:22.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:29:22.874 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:29:23.116 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:29:23.135 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [403] milliseconds
+19-Nov-2021 19:29:23.162 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:29:23.162 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:29:23.169 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:29:23.182 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:29:23.347 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:29:23.373 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [204] ms
+19-Nov-2021 19:29:23.373 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:29:23.404 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [31] ms
+19-Nov-2021 19:29:23.404 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:29:23.429 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [25] ms
+19-Nov-2021 19:29:23.429 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:29:23.575 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [146] ms
+19-Nov-2021 19:29:23.576 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:29:23.589 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [13] ms
+19-Nov-2021 19:29:23.596 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:29:23.603 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [468] milliseconds
+19-Nov-2021 19:29:40.250 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:29:40.250 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:29:40.257 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:29:40.272 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:29:40.304 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:30:21.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:30:21.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:30:21.963 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:30:21.963 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:30:21.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:30:21.965 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:30:22.159 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:30:22.175 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [358] milliseconds
+19-Nov-2021 19:30:22.201 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:30:22.202 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:30:22.206 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:30:22.217 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:30:22.356 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:30:22.386 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [179] ms
+19-Nov-2021 19:30:22.386 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:30:22.415 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [29] ms
+19-Nov-2021 19:30:22.416 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:30:22.438 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [21] ms
+19-Nov-2021 19:30:22.438 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:30:22.579 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [141] ms
+19-Nov-2021 19:30:22.579 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:30:22.595 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [16] ms
+19-Nov-2021 19:30:22.598 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:30:22.612 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [436] milliseconds
+19-Nov-2021 19:31:42.169 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:31:42.169 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:31:42.175 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:31:42.204 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:31:42.222 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:33:31.639 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:33:31.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:33:31.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:33:31.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:33:31.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:33:31.651 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:33:31.859 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:33:31.879 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [364] milliseconds
+19-Nov-2021 19:33:31.909 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:33:31.909 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:33:31.913 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:33:31.923 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:33:32.080 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:33:32.107 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [194] ms
+19-Nov-2021 19:33:32.107 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:33:32.142 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [35] ms
+19-Nov-2021 19:33:32.143 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:33:32.167 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [25] ms
+19-Nov-2021 19:33:32.168 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:33:32.300 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [132] ms
+19-Nov-2021 19:33:32.300 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:33:32.314 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [14] ms
+19-Nov-2021 19:33:32.318 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:33:32.328 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [448] milliseconds
+19-Nov-2021 19:42:37.836 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 19:42:37.836 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:42:37.837 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 19:42:37.849 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:42:37.889 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:51:08.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 19:51:08.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 19:51:08.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 19:51:08.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 19:51:08.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 19:51:08.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 19:51:08.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 19:51:08.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 19:51:08.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 19:51:08.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:51:08.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:51:08.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 19:51:08.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 19:51:08.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 19:51:08.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 19:51:08.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 19:51:08.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 19:51:08.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 19:51:08.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 19:51:08.191 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 19:51:08.400 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:51:08.415 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [366] milliseconds
+19-Nov-2021 19:51:08.437 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 19:51:08.437 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 19:51:08.443 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 19:51:08.453 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 19:51:08.598 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 19:51:08.624 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [181] ms
+19-Nov-2021 19:51:08.624 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 19:51:08.649 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [25] ms
+19-Nov-2021 19:51:08.649 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 19:51:08.677 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [28] ms
+19-Nov-2021 19:51:08.677 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 19:51:08.807 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [130] ms
+19-Nov-2021 19:51:08.807 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 19:51:08.822 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [15] ms
+19-Nov-2021 19:51:08.824 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 19:51:08.832 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [416] milliseconds
+19-Nov-2021 20:01:49.941 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 20:01:49.941 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:01:49.947 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 20:01:49.960 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:01:49.999 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:02:06.977 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 20:02:06.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 20:02:06.982 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:02:06.982 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 20:02:06.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 20:02:06.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 20:02:06.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 20:02:06.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 20:02:06.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 20:02:06.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:02:06.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:02:06.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 20:02:06.993 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 20:02:07.235 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:02:07.261 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [422] milliseconds
+19-Nov-2021 20:02:07.293 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 20:02:07.293 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 20:02:07.298 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 20:02:07.308 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 20:02:07.493 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 20:02:07.525 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [227] ms
+19-Nov-2021 20:02:07.526 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 20:02:07.563 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [37] ms
+19-Nov-2021 20:02:07.563 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 20:02:07.591 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [28] ms
+19-Nov-2021 20:02:07.592 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 20:02:07.783 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [191] ms
+19-Nov-2021 20:02:07.783 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 20:02:07.799 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [15] ms
+19-Nov-2021 20:02:07.802 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:02:07.812 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [550] milliseconds
+19-Nov-2021 20:03:32.344 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 20:03:32.344 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:03:32.350 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 20:03:32.370 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:03:32.398 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:25:55.600 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.5
+19-Nov-2021 20:25:55.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2021 08:19:50 UTC
+19-Nov-2021 20:25:55.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.5.0
+19-Nov-2021 20:25:55.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2021 20:25:55.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.2-arch1-1
+19-Nov-2021 20:25:55.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2021 20:25:55.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+19-Nov-2021 20:25:55.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12
+19-Nov-2021 20:25:55.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2021 20:25:55.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:25:55.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/logging.properties
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|9570-arch
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2021 20:25:55.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2021 20:25:55.611 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2021 20:25:55.611 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:25:55.611 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5
+19-Nov-2021 20:25:55.611 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/temp
+19-Nov-2021 20:25:55.611 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2021 20:25:55.802 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:25:55.822 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [339] milliseconds
+19-Nov-2021 20:25:55.852 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2021 20:25:55.852 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.5]
+19-Nov-2021 20:25:55.858 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml]
+19-Nov-2021 20:25:55.868 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has been ignored
+19-Nov-2021 20:25:56.049 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2021 20:25:56.082 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/conf/Catalina/localhost/ROOT.xml] has finished in [224] ms
+19-Nov-2021 20:25:56.083 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager]
+19-Nov-2021 20:25:56.115 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/host-manager] has finished in [31] ms
+19-Nov-2021 20:25:56.115 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager]
+19-Nov-2021 20:25:56.134 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/manager] has finished in [19] ms
+19-Nov-2021 20:25:56.135 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples]
+19-Nov-2021 20:25:56.302 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/examples] has finished in [168] ms
+19-Nov-2021 20:25:56.303 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs]
+19-Nov-2021 20:25:56.328 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/pascal/io.rastered/rastered.io/apache-tomcat-10.0.5/webapps/docs] has finished in [24] ms
+19-Nov-2021 20:25:56.332 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:25:56.340 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [517] milliseconds
+19-Nov-2021 20:31:03.758 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2021 20:31:03.759 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:31:03.765 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2021 20:31:03.766 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [FilterServlet]
+19-Nov-2021 20:31:03.902 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2021 20:31:03.912 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

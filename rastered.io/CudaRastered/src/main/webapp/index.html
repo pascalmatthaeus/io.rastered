@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <script>
+            var image;
+            var imgBase="buff?valGam=";
+            function count(){
+                var x = document.getElementById('valueGam').value;
+                var y = document.getElementById('valueExp').value;
+                var z = document.getElementById('myRange').value;
+                
+                image.src = imgBase+x+"&valExp="+y + "&valRange="+z + "&" + new Date().getTime();
+            }
+
+            function init(){
+                image = document.getElementById("image");
+
+                if( image ){
+                    setInterval("count()",100);
+                }
+            }
+            window.onload = init;
+        </script>
+        
+    </head>
+    
+    <body>
+        <form>
+            Gamma: <input type="text" name="valGam" id="valueGam" size="20">
+            Exposure: <input type="text" name="valExp" id="valueExp" size="20">
+	</form>
+        <input type="range" min="1" max="100" value="100" id="myRange">
+        <div><img src="buff?valGam=100&valExp=100" id="image"></div>
+    </body>
+    
+</html>

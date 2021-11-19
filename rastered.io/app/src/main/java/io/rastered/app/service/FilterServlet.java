@@ -30,7 +30,7 @@ public class FilterServlet extends HttpServlet {
         public void init() throws ServletException
         {
             pathToWeb = getServletContext().getRealPath(File.separator);
-            try{f = new File("/home/sk/Pictures/lenna.jpg");}catch(Exception e){}
+            try{f = new File("/home/pascal/Pictures/lenna.jpg");}catch(Exception e){}
             System.out.println(pathToWeb+"720.jpg");
             try{bi = ImageIO.read(f);}catch(Exception e){}
         }

@@ -18,6 +18,7 @@ public class VideoFrameTask implements Runnable
     @Override
     public void run()
     {
+        System.out.println("VideoFrameTask "+Thread.currentThread().getName()+" started.");
         Thread.currentThread().setPriority(8);
         int imgBytes;
         try
