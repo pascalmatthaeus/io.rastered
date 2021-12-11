@@ -32,57 +32,63 @@ const ParamSlider = styled.input`
 `;
 
 export const FilterDetails = (props) => {
-  const list = ["", "", ""];
-  const content = useRef(null);
-  const [height, setHeight] = useState(0);
-  const valueSli = useState(100);
-  const toggleFilDetails = () => {
-    setHeight(height === 0 ? content.current.scrollHeight : 0);
-  };
-  const [valSli, setValSli] = useState(69);
-  const sliChange = (e) => {
-    setValSli(e.currentTarget.value);
-  };
+	const content = useRef(null);
+	const [height, setHeight] = useState(0);
+	const toggleFilDetails = () => {
+		setHeight(height === 0 ? content.current.scrollHeight : 0);
+	};
 
-  const getData = () => {
-    fetch(
-      "https://app.rastered.io/filter?valGam=100&valExp=100&valSli=" +
-        valSli +
-        "&" +
-        new Date().getTime(),
-      { method: "GET", credentials: "include" }
-    )
-      .then(function (response) {
-        console.log(response);
-        return response.json();
-      })
-      .then(function (jsonResponse) {
-        console.log(jsonResponse);
-      });
-  };
+	const [parameters, setParameters] = useState({params:[]});
+  
+	const sliChange = (e) => {
+		let newParameters = {...parameters};
+		newParameters.params[e.currentTarget.attributes.target.value] = e.currentTarget.value;
+		console.log("props.target for slider: "+e.currentTarget.attributes.target.value);
+		console.log("value: "+e.currentTarget.value)
+		setParameters(newParameters);
+		console.log("newParameters contains: "+newParameters[e.currentTarget.attributes.target.value]);
+	};
+  
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      getData();
-    }, 468);
-    return () => {
-      clearInterval(interval);
-    };
-  });
+	const postParameters = () => {
+		fetch(
+			"https://app.rastered.io/filter?valGam=" +
+			parameters.params[0] +
+			"&valExp=" +
+			parameters.params[1] +
+			"&valSli=100&" +
+			new Date().getTime(),
+			{ method: "POST", 
+			credentials: "include",
+			body: JSON.stringify(parameters) }
+		).then(function (response) {
+			console.log(response);
+			return response.json();
+		}).then(function (jsonResponse) {
+			console.log(jsonResponse);
+		});
+		console.log(JSON.stringify(parameters));
+		props.fncTellAmountFrames(props.amountFrames+1);
+	};
 
-  return (
-    <>
-      <h2 onClick={toggleFilDetails}>FILTER</h2>
-      <Ul height={height} ref={content}>
-        {/*list.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))*/}
-        <ParamSlider type="range" min="1" max="100" onChange={sliChange} />
-        {/*}<b>{valSli}</b>*/}
-        {/*<ParamSlider type="range" min="1" max="100" />
-        <ParamSlider type="range" min="1" max="100" />
-        <ParamSlider type="range" min="1" max="100" />*/}
-      </Ul>
-    </>
-  );
+	useEffect(() => {
+		const interval = setInterval(() => {
+			postParameters();
+		}, 468);
+		return () => {
+			clearInterval(interval);
+		};
+	});
+
+	return (
+		<>
+			<h2 onClick={toggleFilDetails}>FILTER</h2>
+			<Ul height={height} ref={content}>
+				Gamma
+				<ParamSlider type="range" min="1" max="100" target="0" onChange={sliChange} />
+				Exposure
+				<ParamSlider type="range" min="1" max="100" target="1" onChange={sliChange} />
+			</Ul>
+		</>
+	);
 };

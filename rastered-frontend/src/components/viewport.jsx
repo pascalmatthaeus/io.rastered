@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, FormControl } from "react-bootstrap";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import { SessionBtn } from "./sessionbtn";
 import { FilterDetails } from "./filterdetails";
 import { VideoPlayer } from "./videoplayer";
+import { Loader } from "./spinner.jsx";
 
 export const GlobalTheme = createGlobalStyle`
 body {
@@ -59,16 +61,32 @@ const ParamSlider = styled.input`
 `;
 
 export const AppViewport = (props) => {
+	const [showVP, setShowVP] = useState(false);
+	const [amountFrames, setAmountFrames] = useState(0);
+	
+	const tellAmountFrames = (amount) => {
+		setAmountFrames(amount);
+		console.log("Amount of filter API calls: "+amountFrames);
+	}
   return (
     <Viewport>
-      <p>
-        <FilterDetails />
-      </p>
-      <p>
-        <DocumentCard>
-          <VideoPlayer />
-        </DocumentCard>
-      </p>
+    	<SessionBtn onClick={e => {setShowVP(true)}}/>
+      { showVP && props.fetchFinished ?
+	<>
+	      <p>
+		<FilterDetails fncTellAmountFrames={tellAmountFrames} amountFrames={amountFrames}/>
+	      </p>
+	</>
+	: null }
+	<>
+	      <p>
+		<DocumentCard>
+		{ amountFrames>5 ?
+		  <VideoPlayer streamKey={props.streamKey}/>
+		: <Loader/> }
+		</DocumentCard>
+	      </p>
+	</>
     </Viewport>
   );
 };

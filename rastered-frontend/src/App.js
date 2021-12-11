@@ -14,53 +14,38 @@ import Sidebar from "./components/Sidebar";
 import { AppViewport, GlobalTheme } from "./components/viewport";
 
 function App() {
-  useEffect( () => {
-    async function createPlayerData() {
-		async function setSource() {
+	const [streamKey,setStreamKey] = useState(null);
+	const [fetchHasFinished,setFetchHasFinished] = useState(false);
+	useEffect( async () => {
+		async function fetchStreamKey() {
 			const response = await fetch("https://app.rastered.io/filter",
-				{credentials:"include"});
+				{ method:"POST",
+				credentials:"include"}
+			);
 			const responseJson = await response.json();
 			const sk = await responseJson.streamKey;
-			let webrtcSources = await [
-			  {
-				type: "webrtc",
-				file: "wss://stream.rastered.io:3334/app/stream"+sk,
-				label: "Viewport",
-			  },
-			];
-			return webrtcSources;
+			await setFetchHasFinished(true);
+			return sk;
 		}
-		const webrtcSources = await setSource();
-
-		let op = await document.querySelector("#player_id");
-		let player = await window.OvenPlayer.create(op, {
-		  sources: webrtcSources,
-		  autoStart: true,
-		  mute: true,
-		  controls: false,
-		});
 		
-		console.log(webrtcSources);
-	}
-	createPlayerData();
-	
-  });
-  return (
-    <React.Fragment>
-      <Router>
-        <GlobalTheme />
-        <Sidebar />
-        <NavBar />
-        <AppViewport imgsrc="lenna.jpg" />
+		await setStreamKey(await fetchStreamKey());
+	}, []);
+	return (
+		<React.Fragment>
+			<Router>
+				<GlobalTheme />
+				<Sidebar />
+				<NavBar />
+				<AppViewport streamKey={streamKey} fetchFinished={fetchHasFinished}/>
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route component={NoMatch} />
-        </Switch>
-      </Router>
-    </React.Fragment>
-  );
+				<Switch>
+				  <Route exact path="/" component={Home} />
+				  <Route path="/about" component={About} />
+				  <Route component={NoMatch} />
+				</Switch>
+			</Router>
+		</React.Fragment>
+	);
 }
 
 export default App;

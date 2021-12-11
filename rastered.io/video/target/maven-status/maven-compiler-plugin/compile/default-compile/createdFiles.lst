@@ -1,5 +1,6 @@
 io/rastered/video/VideoFrameTask.class
-io/rastered/video/VideoStream.class
 io/rastered/video/ServiceLauncher.class
+io/rastered/video/VideoStream.class
+.netbeans_automatic_build
 io/rastered/video/VideoFrameSocket.class
 io/rastered/video/SocketAcceptor.class
