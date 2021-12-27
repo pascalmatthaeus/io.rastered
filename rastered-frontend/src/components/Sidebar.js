@@ -5,14 +5,20 @@ import styled from "styled-components";
 /* This defines the actual bar going down the screen */
 const StyledSideNav = styled.div`
   position: fixed; /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
-  height: 100%;
-  width: 40px; /* Set the width of the sidebar */
+  height: 100vh;
+  width: ${props => props.width ? props.width : "40px"}; /* Set the width of the sidebar */
+  min-width: ${props => props.minWidth ? props.minWidth : "40px"};
+  grid-column:1/2;
+  grid-row:1/2;
   z-index: 1; /* Stay on top of everything */
-  top: 3.4em; /* Stay at the top */
+  top: 10vh; /* Stay at the top */
   background-color: #222; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow: hidden; /* Disable horizontal scroll */
   padding-top: 25px;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 25%);
+  @media (max-width:768px) {
+    	display: none;
+    }
 `;
 
 const IconContainer = styled.div`
@@ -33,7 +39,6 @@ const StyledNavItem = styled.div`
     color: ${(props) => (props.active ? "#21a7eb" : "grey")};
     text-decoration: none;
     :hover {
-      color: ${(props) => (props.active ? "#6fccfc" : "#6dccfc")};
       text-decoration: none; /* Gets rid of underlining of icons */
     }
   }
@@ -87,7 +92,7 @@ class SideNav extends React.Component {
   render() {
     const { items, activePath } = this.state;
     return (
-      <StyledSideNav>
+      <StyledSideNav width={this.props.width} minWidth={this.props.minWidth}>
         <IconContainer>
           {
             /* items = just array AND map() loops thru that array AND item is param of that loop */
@@ -115,7 +120,7 @@ class SideNav extends React.Component {
 
 export default class Sidebar extends React.Component {
   render() {
-    return <SideNav></SideNav>;
+    return <SideNav width={this.props.width} minWidth={this.props.minWidth}></SideNav>;
   }
 }
 
