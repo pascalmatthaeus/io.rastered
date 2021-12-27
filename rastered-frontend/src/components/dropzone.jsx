@@ -2,7 +2,6 @@ import React, {useState,useRef} from "react";
 import styled,{keyframes} from "styled-components";
 import AddIcon from '@material-ui/icons/Add';
 import { Error } from "./error";
-import { Loader } from "./spinner";	// this can go after icon integrated
 
 const DropzoneContainerStyled = styled.div`
 	width: 100%;
@@ -127,22 +126,28 @@ export const Dropzone = (props) =>
 		e.preventDefault();
 		e.stopPropagation();
 		setDragged(false);
-		setDropped(true);
 		
-		if (e.dataTransfer.items && e.dataTransfer.items[0].kind === 'file') {
-			inputFile = e.dataTransfer.items[0].getAsFile();
-			console.log("File name: "+inputFile.name);
-			if (inputFile.type === 'image/jpeg') {
-				setErrorVisible(false);
-				setSubmitting(true);
-				await xhrFileUpload(inputFile);
-			}
-			else {
-				setErrorMsg("This file is not an image.");
-				setErrorVisible(true);
-				console.log("File type: "+inputFile.type);
-			}
-		};
+		if (!submitting) {
+			setDropped(true);
+			if (e.dataTransfer.items && e.dataTransfer.items[0].kind === 'file') {
+				inputFile = e.dataTransfer.items[0].getAsFile();
+				console.log("File name: "+inputFile.name);
+				if (inputFile.type === 'image/jpeg') {
+					setErrorVisible(false);
+					setSubmitting(true);
+					await xhrFileUpload(inputFile);
+				}
+				else {
+					setErrorMsg("This file is not an image.");
+					setErrorVisible(true);
+					console.log("File type: "+inputFile.type);
+				}
+			};
+		}
+		else {
+			setErrorMsg("An upload is in progress already.");
+			setErrorVisible(true);
+		}
 	};
 	
 	let inputFile = useRef(null);
@@ -176,6 +181,7 @@ export const Dropzone = (props) =>
 			setTimeout( 
 				() => {
 					setSubmitting(false);
+					setDropped(false);
 					props.triggerNextView();
 				}, 1000
 			);
