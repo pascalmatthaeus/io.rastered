@@ -97,21 +97,15 @@
 			<!-- Settings for multi ip/domain and TLS -->
 			<Host>
 				<Names>
-					<!-- Host names
-						<Name>stream1.airensoft.com</Name>
-						<Name>stream2.airensoft.com</Name>
-						<Name>*.sub.airensoft.com</Name>
-						<Name>192.168.0.1</Name>
-					-->
 					<Name>stream.rastered.io</Name>
 					<Name>127.0.0.1</Name>
 					<Name>localhost</Name>
 					<Name>192.168.188.38</Name>
 				</Names>
 				<TLS>
-					<CertPath>/opt/ovenmediaengine/bin/cert2.pem</CertPath>
-					<KeyPath>/opt/ovenmediaengine/bin/privkey2.pem</KeyPath>
-					<ChainCertPath>/opt/ovenmediaengine/bin/fullchain2.pem</ChainCertPath>
+					<CertPath>/opt/ovenmediaengine/bin/cert.pem</CertPath>
+					<KeyPath>/opt/ovenmediaengine/bin/privkey.pem</KeyPath>
+					<ChainCertPath>/opt/ovenmediaengine/bin/fullchain.pem</ChainCertPath>
 				</TLS>
 			</Host>
 
