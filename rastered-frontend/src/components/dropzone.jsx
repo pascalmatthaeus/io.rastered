@@ -186,8 +186,9 @@ export const Dropzone = (props) =>
 				}, 1000
 			);
 		};
-		xhr.open("PUT","https://httpbin.org/put",true);
+		xhr.open("POST","https://app.rastered.io/push",true);
 		xhr.setRequestHeader("Content-Type","application/octet-stream");
+		xhr.withCredentials = true;
 		xhr.send(file);
 		// xhr.send(blob);
 	};

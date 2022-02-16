@@ -17,7 +17,7 @@ import { AppViewport, GlobalTheme } from "./components/viewport";
 function App() {
 	const [streamKey,setStreamKey] = useState(null);
 	const [fetchHasFinished,setFetchHasFinished] = useState(false);
-	/*useEffect( async () => {
+	useEffect( async () => {
 		async function fetchStreamKey() {
 			const response = await fetch("https://app.rastered.io/filter",
 				{ method:"POST",
@@ -30,7 +30,7 @@ function App() {
 		}
 		
 		await setStreamKey(await fetchStreamKey());
-	}, []);*/
+	}, []);
 	return (
 		<React.Fragment>
 			<Router>

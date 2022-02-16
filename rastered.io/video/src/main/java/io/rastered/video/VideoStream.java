@@ -11,52 +11,20 @@ public class VideoStream implements Runnable
 {
     public volatile BufferedImage biOut;
     public BufferedOutputStream out;
-    String[] ffmpegCommand = 
-    {
-        "ffmpeg",
-        "-y",
-        "-f",
-        "image2pipe",
-        "-use_wallclock_as_timestamps",
-        "1",
-        "-r",
-        "10",
-        "-vcodec",
-        "mjpeg",
-        "-i",
-        "-",
-        "-vf",
-        "tmix=frames=15",
-        "-c:v",
-        "libx264",
-        //"h264_nvenc",
-        "-bf",
-        "0",
-        "-an",
-        /*"-acodec",
-        "aac",
-        "-pes_payload_size",
-        "0",*/
-        "-preset",
-        "ultrafast",
-        //"ll",
-        "-tune",
-        "zerolatency",
-        "-b:v",
-        "35k",
-        "-r",
-        "20",
-        "-f",
-        "flv",
-        "placeholder"
-    };
+    String [] ffmpegCommand;
     
     public VideoStream(int streamKey)
     {
+        ffmpegCommand = EncoderConfiguration.DEFAULT;
         ffmpegCommand[ffmpegCommand.length-1] = 
-                "rtmp://127.0.0.1:1935/app/stream"
-                + streamKey
-                ;//+ "?pkt_size=1316";
+                "rtmp://127.0.0.1:1935/app/stream" + streamKey;
+    }
+    
+    public VideoStream(int streamKey, EncoderConfiguration config)
+    {
+        ffmpegCommand = config.getCommand();
+        ffmpegCommand[ffmpegCommand.length-1] = 
+                "rtmp://127.0.0.1:1935/app/stream" + streamKey;
     }
     
     @Override

@@ -28,18 +28,17 @@ public class FilterServlet extends HttpServlet {
         public void init() throws ServletException
         {
             pathToWeb = getServletContext().getRealPath(File.separator);
-            try{f = new File("/home/sk/Pictures/lenna.jpg");}catch(Exception e){}
+            try{f = new File("/home/pascal/Pictures/lenna.jpg");}catch(Exception e){}
             System.out.println(pathToWeb+"720.jpg");
             try{bi = ImageIO.read(f);}catch(Exception e){}
         }
         
         @Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException 
+	protected void doPost( HttpServletRequest request, HttpServletResponse response) 
+                throws IOException 
         {
-            // !!! wischtisch voll brudah !!!
-            //WHICH OBJECTS ARE REUSABLE AND THEREFORE SHOULD BE INSIDE CONTEXT SCOPE ?????? FOR FilterParameters
-            
-            // => rather assign an individual float buffer (2D array) to each client session,
+            // Figure here which objects are reusable and therefore should be inside ctx scope.
+            // => assign an individual float buffer (2D array) to each client session,
             // transform ImageProcessor into a stateless API (which doesn't own the float buffer)
             // => store the origImage as a separate session attribute. Overwrite if client clicks "apply"
             // use a global ImageProcessor with float[][] img as input.
@@ -47,13 +46,14 @@ public class FilterServlet extends HttpServlet {
             HttpSession session = request.getSession();
             
             // Debug: List all attributes for current session.
-            /*Enumeration<String> attributes = request.getSession().getAttributeNames();
+            Enumeration<String> attributes = request.getSession().getAttributeNames();
             while (attributes.hasMoreElements()) {
                 System.out.println((String) attributes.nextElement());
-            }*/
+            }
             
             ImageProcessor sessionImPro = (ImageProcessor)session.getAttribute("imageprocessor");
             SocketClient sessionSocket = (SocketClient)session.getAttribute("socket");
+            
             if ( sessionImPro == null ) 
             {
                 System.out.println("New Session created.");
@@ -72,7 +72,8 @@ public class FilterServlet extends HttpServlet {
                     sessionSocket.sendMsg(streamKey);
                 } catch (Exception e) { sessionSocket=null; }
             }
-            // HOW TO parse request parameters:
+            
+            // Parse request parameters:
             // valueGam = Integer.parseInt(request.getParameter("valGam").toString());
             
             // now this is thread safe
@@ -104,7 +105,7 @@ public class FilterServlet extends HttpServlet {
                     sessionSocket.sendMsg(sessionImPro.getImage());
                 } catch (Exception e)
                 { 
-                    System.out.println("Could not send frame to io.rastered.video! UPDATED");
+                    System.out.println("Could not send frame to io.rastered.video!");
                     e.printStackTrace();
                 }
 

@@ -1,4 +1,5 @@
 io/rastered/app/filters/RequestFilter.class
+io/rastered/app/service/PushImageServlet.class
 io/rastered/app/service/ImageProcessor.class
 io/rastered/app/service/FilterServlet.class
 io/rastered/app/model/FilterParameters.class

@@ -12,9 +12,17 @@
         <servlet-name>FilterServlet</servlet-name>
         <servlet-class>io.rastered.app.service.FilterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PushImageServlet</servlet-name>
+        <servlet-class>io.rastered.app.service.PushImageServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FilterServlet</servlet-name>
         <url-pattern>/filter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PushImageServlet</servlet-name>
+        <url-pattern>/push</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

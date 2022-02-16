@@ -30,10 +30,18 @@ public class VideoFrameTask implements Runnable
         VideoStream vidStream = null;
         try
         {
-            vidStream = new VideoStream(socketDIS.readInt());
+            vidStream = new VideoStream
+            (
+                    socketDIS.readInt(), 
+                    new EncoderConfiguration
+                    (
+                            EncoderConfiguration.Bitrate.MEDIUM,
+                            EncoderConfiguration.Encoder.NVENC,
+                            EncoderConfiguration.FrameBlending.LOW
+                    )
+            );
             new Thread(vidStream).start();
         } catch (Exception e) {}
-        
         
         while (true) 
         {
