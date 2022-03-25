@@ -14,24 +14,30 @@ public class VideoFrameSocket
     The Class CachedThreadPool & the method ThreadPoolExecutor.setCorePoolSize
     might be interesting for future development, allowing implementation of a
     dynamically sized pool. */
-    private final ThreadPoolExecutor frameTaskExecutor = new ThreadPoolExecutor(
-            32, 64, 100000, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(64)
+    private final ThreadPoolExecutor frameTaskExecutor = 
+        new ThreadPoolExecutor(
+            64, 64, 100000, 
+            TimeUnit.MILLISECONDS, 
+            new ArrayBlockingQueue<>(64)
     );
     
-    public VideoFrameSocket(int port) throws Exception
+    public VideoFrameSocket( int port ) throws Exception
     {
-        ServerSocket svrSck = new ServerSocket(6679);
-        SocketAcceptor acceptorThread = new SocketAcceptor(svrSck,frameTaskExecutor);
+        var svrSck = new ServerSocket(6679);
+        var acceptorThread = 
+            new SocketAcceptor(svrSck,frameTaskExecutor);
         new Thread(acceptorThread).start();
     }
     
-    public VideoFrameSocket(int port,VideoStream targetStream, int acceptorThreadCount) throws Exception
+    public VideoFrameSocket( int port,VideoStream targetStream, 
+        int acceptorThreadCount ) throws Exception
     {
-        ServerSocket svrSck = new ServerSocket(6679);
-        SocketAcceptor acceptorThreads [] = new SocketAcceptor[acceptorThreadCount];
+        var svrSck = new ServerSocket(6679);
+        SocketAcceptor [] acceptorThreads = 
+            new SocketAcceptor[acceptorThreadCount];
+        
         for (int i=0;i<acceptorThreads.length;i++)
         {
-        
             acceptorThreads[i] = new SocketAcceptor(svrSck,frameTaskExecutor);
             new Thread(acceptorThreads[i]).start();
         }

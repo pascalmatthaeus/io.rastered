@@ -3,56 +3,75 @@ package io.rastered.video;
 import java.net.Socket;
 import java.io.DataInputStream;
 import java.io.BufferedInputStream;
+import java.util.concurrent.ExecutorService;
 
 public class VideoFrameTask implements Runnable
 {
-    Socket cSocketIn;
-    DataInputStream socketDIS;
-    BufferedInputStream socketBIS;
+    protected Socket cSocketIn;
+    protected ExecutorService workerPool;
     
-    VideoFrameTask(Socket cSocketIn)
+    VideoFrameTask(Socket cSocketIn, ExecutorService workerPool)
     {
         this.cSocketIn = cSocketIn;
+        this.workerPool = workerPool;
     }
     
     @Override
     public void run()
-    {
-        System.out.println("VideoFrameTask "+Thread.currentThread().getName()+" started.");
+    {   
+        System.out.println(
+            "VideoFrameTask "+Thread.currentThread().getName()+" started."
+        );
         Thread.currentThread().setPriority(8);
-        int imgBytes;
-        try
-        {
-            socketBIS = new BufferedInputStream(cSocketIn.getInputStream());
-            socketDIS = new DataInputStream(socketBIS);
-        } catch(Exception e){}
         
-        VideoStream vidStream = null;
-        try
+        try ( var socketDIS = new DataInputStream(
+            new BufferedInputStream(cSocketIn.getInputStream())))
         {
-            vidStream = new VideoStream
+            int streamKey = socketDIS.readInt();
+            int frameWidth = socketDIS.readInt();
+            int frameHeight = socketDIS.readInt();
+            
+            final var vidStream = new VideoStream
             (
-                    socketDIS.readInt(), 
-                    new EncoderConfiguration
-                    (
-                            EncoderConfiguration.Bitrate.MEDIUM,
-                            EncoderConfiguration.Encoder.NVENC,
-                            EncoderConfiguration.FrameBlending.LOW
-                    )
+                EncoderConfigurationFactory.build
+                (
+                    streamKey, frameWidth, frameHeight, 
+                    EncoderConfigurationFactory.Quality.HIGH
+                )
             );
-            new Thread(vidStream).start();
-        } catch (Exception e) {}
-        
-        while (true) 
-        {
-            try 
+            workerPool.execute(vidStream);
+            
+            synchronized( vidStream )
             {
-                imgBytes = socketDIS.readInt();
-                // vidStream.out.write(socketDIS.readNBytes(imgBytes));
-                byte [] temp = socketDIS.readNBytes(imgBytes);
-                for (int i=0;i<20;i++) vidStream.out.write(temp);
-                vidStream.out.flush();
-            } catch (Exception e) {}
-        }
+                vidStream.wait();
+            }
+            
+            byte [] framebuffer = new byte[frameWidth * frameHeight * 3];
+            
+            while (true) 
+            {
+                try {
+                    socketDIS.readFully(framebuffer);
+                    for (int i=0;i<10;i++) vidStream.out.write(framebuffer);
+                    vidStream.out.flush();
+                    
+                    int frameWidthNew = socketDIS.readInt();
+                    int frameHeightNew = socketDIS.readInt();
+                    
+                    if (frameWidthNew != frameWidth 
+                        || frameHeightNew != frameHeight)
+                    {
+                        frameWidth = frameWidthNew;
+                        frameHeight = frameHeightNew;
+                        vidStream.setResolution(frameWidth, frameHeight);
+                        framebuffer = new byte[frameWidth * frameHeight * 3];
+                        synchronized( vidStream )
+                        {
+                            vidStream.wait();
+                        }
+                    }
+                } catch (Exception e) { e.printStackTrace(); }
+            }
+        } catch (Exception e) { e.printStackTrace(); }
     }
 }

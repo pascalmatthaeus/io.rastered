@@ -1,70 +1,87 @@
 package io.rastered.app.service;
 
+import io.rastered.app.core.Texture;
 import java.awt.image.BufferedImage;
-import java.awt.image.WritableRaster;
-import java.awt.image.ColorModel;
+import java.awt.image.DataBufferByte;
 
 public class ImageProcessor 
 {
-    private BufferedImage im,orig;
+    protected Texture target;
+    protected byte [] rgb;
+    protected byte [] rgbOrig;
     
-    public ImageProcessor(BufferedImage im)
+    public ImageProcessor(Texture target)
     {
-        this.im=im;
-        this.orig=deepCopy(this.im);
+        this.target = target;
+        rgb = target.getData();
+        
+        rgbOrig = rgb.clone();
     }
     
-    public BufferedImage getImage()
+    public byte [] getRGBBuffer()
     {
-        return im;
+        return rgb;
+    }
+    
+    protected static byte [] getRGBBuffer( BufferedImage bi )
+    {
+        return ((DataBufferByte) bi.getRaster()
+            .getDataBuffer())
+            .getData();
+    }
+    
+    public Texture getTarget()
+    {
+        return target;
     }
     
     public void reset()
     {
-        this.im=deepCopy(this.orig);
+        this.rgb = rgbOrig.clone();
     }
     
-    private BufferedImage deepCopy(BufferedImage bi) 
+    protected static float normalize(float fRGB)
     {
-        ColorModel cm = bi.getColorModel();
-        boolean isAlphaPremultiplied = cm.isAlphaPremultiplied();
-        WritableRaster raster = bi.copyData(null);
-        return new BufferedImage(cm, raster, isAlphaPremultiplied, null);
+        return Math.min(1.0f, Math.max(0.0f,fRGB));
     }
     
     public void filterExp(int v)
     {
-        for (int i=0;i<im.getWidth();i++)
+        for (int i=0;i<rgb.length;i++)
         {
-            for (int j=0;j<im.getHeight();j++)
-            {
-                int rgb=im.getRGB(i, j);
-                float r = ((rgb>>16) & 0xff)/256.0f;
-                r*=((float)v/100.0f);
-                r = Math.min(Math.max(0f, r),1f);
-                r*=256.0f;
-                int ir = (int)r;
-                ir = (255<<24)|(ir<<16)|(ir<<8)|ir;
-                im.setRGB(i,j,ir);
-            }
+            float fRGB = (rgb[i]&0xFF)/255.0f;
+            fRGB *= (v/100.0f);
+            rgb[i] = (byte)(fRGB*255.0f);
         }
     }
     
     public void filterGam(int v)
     {
-        for (int i=0;i<im.getWidth();i++)
+        for (int i=0;i<rgb.length;i++)
         {
-            for (int j=0;j<im.getHeight();j++)
-            {
-                int rgb=im.getRGB(i, j);
-                float r = ((rgb>>16) & 0xff)/256.0f;
-                r = (float)Math.pow(r, 1.0f/((float)v/100f));
-                r = Math.min(Math.max(0f, r),1f);
-                r*=256.0f;
-                int ir = (int)r;
-                ir = (255<<24)|(ir<<16)|(ir<<8)|ir;
-                im.setRGB(i,j,ir);
-            }
+            float fRGB = (rgb[i]&0xFF)/255.0f;
+            fRGB = (float)Math.pow(fRGB, 1.0f / (v/100.0f) );
+            rgb[i] = (byte)(fRGB*255.0f);
+        }
+    }
+    
+    public void filterSharpness(int v)
+    {
+        int width = target.getWidth();
+        
+        for (int i=0;i<rgb.length;i++)
+        {
+            float fRGB = (rgb[i]&0xFF)/255.0f;
+            int fetchIdxU = Math.min( width-1, (i%width)+3);
+            int fetchIdxV = i/width;
+            
+            float fetch = 
+                (rgb[fetchIdxV*width+fetchIdxU]&0xFF)/255.0f;
+            float mask = fRGB - (fRGB + fetch)*0.5f;
+            mask *= 10.0f;
+            fRGB += (mask * (v/100.0f));
+            fRGB = normalize(fRGB);
+            rgb[i] = (byte)(fRGB*255.0f);
         }
     }
 }

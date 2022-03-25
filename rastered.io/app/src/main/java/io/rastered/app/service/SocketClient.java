@@ -1,52 +1,43 @@
 package io.rastered.app.service;
 
-import java.io.OutputStream;
 import java.io.DataOutputStream;
 import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.BufferedReader;
-import java.io.PrintWriter;
 import java.net.Socket;
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 
 public class SocketClient 
 {
     private Socket cSck;
-    private PrintWriter out;
-    private BufferedReader in;
+    private DataOutputStream dataOut;
     
-    public SocketClient(String ip, int port) throws Exception
+    public SocketClient( String ip, int port ) throws Exception
     {
-        //synchronized(this){
-        try
-        {
-            cSck = new Socket(ip,port);
-        } catch (Exception e) {e.printStackTrace();}//};
+        cSck = new Socket( ip, port );
+        this.dataOut = new DataOutputStream(
+            new BufferedOutputStream(cSck.getOutputStream())
+        );
     }
     
-    public void sendMsg(int streamKey) throws Exception
+    public void sendStreamKey( int streamKey ) throws Exception
     {
-        new DataOutputStream(cSck.getOutputStream()).writeInt(streamKey); // lacks buffer >> no flush needed
+        dataOut.writeInt(streamKey);
+        dataOut.flush();
     }
     
-    public void sendMsg(BufferedImage bi) throws Exception
+    public void sendTextureResolution(
+        int width, int height ) throws Exception
     {
-        OutputStream sOut = cSck.getOutputStream();
-        DataOutputStream dataOut = new DataOutputStream(new BufferedOutputStream(sOut));
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        ImageIO.write(bi,"jpeg",baos);
-        byte [] framebuffer = baos.toByteArray();
-        dataOut.writeInt(framebuffer.length);
-        dataOut.write(framebuffer);
-        //dataOut.writeInt(-1);
+        dataOut.writeInt(width);
+        dataOut.writeInt(height);
+    }
+    
+    public void sendFrame( byte [] frame ) throws Exception
+    {
+        dataOut.write(frame);
         dataOut.flush();
     }
     
     public void stopConnection() throws Exception
     {
-        in.close();
-        out.close();
         cSck.close();
     }
 }

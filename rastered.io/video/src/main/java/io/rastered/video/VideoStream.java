@@ -1,74 +1,90 @@
 package io.rastered.video;
 
-import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.InputStreamReader;
 import java.io.BufferedOutputStream;
-import javax.imageio.ImageIO;
+import java.io.IOException;
 
 public class VideoStream implements Runnable
 {
-    public volatile BufferedImage biOut;
+    private volatile boolean shutdownRequested;
+    private volatile boolean restartRequested;
+    private volatile EncoderConfiguration encoderConfig;
+    private Process encoderProcess;
     public BufferedOutputStream out;
-    String [] ffmpegCommand;
     
-    public VideoStream(int streamKey)
+    public VideoStream( EncoderConfiguration encoderConfig )
     {
-        ffmpegCommand = EncoderConfiguration.DEFAULT;
-        ffmpegCommand[ffmpegCommand.length-1] = 
-                "rtmp://127.0.0.1:1935/app/stream" + streamKey;
-    }
-    
-    public VideoStream(int streamKey, EncoderConfiguration config)
-    {
-        ffmpegCommand = config.getCommand();
-        ffmpegCommand[ffmpegCommand.length-1] = 
-                "rtmp://127.0.0.1:1935/app/stream" + streamKey;
+        this.encoderConfig = encoderConfig;
     }
     
     @Override
     public void run()
     {
         Thread.currentThread().setPriority(8);
-        try{biOut = ImageIO.read(new File("/home/sk/Pictures/lenna.jpg"));}catch(Exception e){}
-        
-        ProcessBuilder pBuilderFfmpeg = new ProcessBuilder(ffmpegCommand);
-        
-        Process encoderProcess;
-        try
+        while (!shutdownRequested)
         {
-            encoderProcess = pBuilderFfmpeg.start();
-            System.out.println("Encoder launched, client provider target is: "+ffmpegCommand[ffmpegCommand.length-1]);
-        } catch(Exception e)
-        {
-            System.out.println("Error running video encoder as sub-process.");
-            e.printStackTrace();
-            encoderProcess=null;
-        }
-        
-        out = new BufferedOutputStream( encoderProcess.getOutputStream() );
-        
-        // Logging & Error Stream Redirection
-        BufferedReader br = new BufferedReader(new InputStreamReader(encoderProcess.getErrorStream()));
-        String ffmpegOutSample = null;
-        //StringBuilder sb = new StringBuilder(); // store the output
-        
-        while (true)
-        {
-            try 
+            System.out.println("rerunning the loop");
+            restartRequested = false;
+            String [] ffmpegCommand = this.encoderConfig.buildCommand();
+            var pBuilderFfmpeg = new ProcessBuilder(ffmpegCommand);
+            try
             {
-                if (br.ready())
+                encoderProcess = pBuilderFfmpeg.start();
+                System.out.println(
+                    "Encoder launched, client provider target is: "
+                    + ffmpegCommand[ffmpegCommand.length-1]);
+            }
+            catch(Exception e)
+            {
+                System.out.println("Error running video encoder as sub-process.");
+                e.printStackTrace();
+            }
+
+            out = new BufferedOutputStream( encoderProcess.getOutputStream() );
+
+            // Logging & Error Stream Redirection
+            var br = new BufferedReader(
+                new InputStreamReader(encoderProcess.getErrorStream())
+            );
+            String ffmpegOutSample;
+            //StringBuilder sb = new StringBuilder(); // store the output
+            
+            synchronized( this )
+            {
+                notify();
+            }
+            
+            while (!restartRequested && !shutdownRequested)
+            {
+                try
                 {
                     ffmpegOutSample = br.readLine();
                     System.out.println(ffmpegOutSample);
                     //sb.append(line); // store the output
+                } catch( IOException e )
+                {
+                    e.printStackTrace();
                 }
-            } catch(Exception e)
-            { 
-                System.out.println("Error shipping frame to video encoder.");
-                e.printStackTrace();
             }
         }
+    }
+    
+    public void setResolution( int width, int height )
+    {
+        encoderConfig.setVideoDimensions(width, height);
+        restartEncoder();
+    }
+    
+    public void shutdown()
+    {
+        encoderProcess.destroyForcibly();
+        shutdownRequested = true;
+    }
+    
+    public void restartEncoder()
+    {
+        encoderProcess.destroyForcibly();
+        restartRequested = true;
     }
 }

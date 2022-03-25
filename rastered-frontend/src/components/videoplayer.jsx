@@ -33,7 +33,6 @@ export const VideoPlayer = (props) => {
 			  controls: false,
 			});
 			
-			
 		}
 		await createPlayerData();
 	},[props.streamKey]);

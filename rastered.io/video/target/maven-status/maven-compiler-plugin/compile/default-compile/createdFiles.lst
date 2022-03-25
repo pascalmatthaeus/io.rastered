@@ -1,6 +1,12 @@
+io/rastered/video/EncoderConfigurationFactory.class
 io/rastered/video/VideoFrameTask.class
+io/rastered/video/EncoderConfiguration.class
+io/rastered/video/EncoderConfigurationFactory$1.class
 io/rastered/video/ServiceLauncher.class
 io/rastered/video/VideoStream.class
-.netbeans_automatic_build
 io/rastered/video/VideoFrameSocket.class
 io/rastered/video/SocketAcceptor.class
+io/rastered/video/EncoderConfiguration$Encoder.class
+io/rastered/video/EncoderConfigurationFactory$Quality.class
+io/rastered/video/EncoderConfiguration$FrameBlending.class
+io/rastered/video/EncoderConfiguration$Bitrate.class

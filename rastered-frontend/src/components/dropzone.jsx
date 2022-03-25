@@ -132,7 +132,7 @@ export const Dropzone = (props) =>
 			if (e.dataTransfer.items && e.dataTransfer.items[0].kind === 'file') {
 				inputFile = e.dataTransfer.items[0].getAsFile();
 				console.log("File name: "+inputFile.name);
-				if (inputFile.type === 'image/jpeg') {
+				if (inputFile.type === 'image/bmp' || inputFile.type === 'image/jpeg') {
 					setErrorVisible(false);
 					setSubmitting(true);
 					await xhrFileUpload(inputFile);
@@ -156,7 +156,7 @@ export const Dropzone = (props) =>
 		if (e.target.files[0] && e.target.files[0] !== null) {
 			let file = e.target.files[0];
 			console.log(file.name);
-			if (file.type === 'image/jpeg') {
+			if (file.type === 'image/bmp' || file.type === 'image/jpeg') {
 				setErrorVisible(false);
 				setSubmitting(true);
 				await xhrFileUpload(file);

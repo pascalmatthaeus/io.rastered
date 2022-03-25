@@ -28,7 +28,9 @@ public class SocketAcceptor implements Runnable
         {
             try
             {
-                workerPool.execute(new VideoFrameTask(svrSck.accept()));
+                workerPool.execute(
+                    new VideoFrameTask( svrSck.accept(), workerPool ) 
+                );
                 System.out.println("Socket client connected.");
                 //System.out.println("Tasks: "+workerPool.getQueue().size());
                 //System.out.println("Pool size: "+workerPool.getPoolSize());

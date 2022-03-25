@@ -83,6 +83,8 @@ export const FilterDetails = (props) => {
 				<ParamSlider type="range" min="1" max="100" target="0" onChange={sliChange} />
 				Exposure
 				<ParamSlider type="range" min="1" max="100" target="1" onChange={sliChange} />
+				Edge Sharpness
+				<ParamSlider type="range" min="1" max="100" target="2" onChange={sliChange} />
 			</Ul>
 		</>
 	);
