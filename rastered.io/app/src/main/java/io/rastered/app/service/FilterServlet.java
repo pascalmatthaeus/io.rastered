@@ -127,33 +127,31 @@ public class FilterServlet extends HttpServlet {
             response.getWriter().print(
                     jsonResponseBuilder.build().toString()
                 );
-            
-            sessionTexture.sampleFrom(sessionTexture.getOriginalData());
-            boolean allArgsGiven = paramList.length == 3;
-            float paramGamma = allArgsGiven ? paramList[0] : 100.0f;
-            float paramExposure = allArgsGiven ? paramList[1] : 100.0f;
-            float paramSharpness = allArgsGiven ? paramList[2] : 100.0f;
-            
-            sessionTexture
-                .filter(Presets.GAMMA, paramGamma)
-                .filter(Presets.EXPOSURE,paramExposure)
-                .filter(Presets.SHARPNESS,paramSharpness);
+            synchronized(sessionTexture) { synchronized(sessionSocket) {
+                sessionTexture.sampleFrom(sessionTexture.getOriginalData());
+                boolean allArgsGiven = paramList.length == 3;
+                float paramGamma = allArgsGiven ? paramList[0] : 100.0f;
+                float paramExposure = allArgsGiven ? paramList[1] : 100.0f;
+                float paramSharpness = allArgsGiven ? paramList[2] : 100.0f;
 
-            try
-            {
-                synchronized(sessionSocket)
+                sessionTexture
+                    .filter(Presets.GAMMA, paramGamma)
+                    .filter(Presets.EXPOSURE,paramExposure)
+                    .filter(Presets.SHARPNESS,paramSharpness);
+
+                try
                 {
                     sessionSocket.sendTextureResolution( 
                         sessionTexture.getWidth(), sessionTexture.getHeight()
                     );
                     sessionSocket.sendFrame(sessionTexture.getData());
+                } catch (Exception e)
+                { 
+                    System.out.println(
+                        "Could not send frame to io.rastered.video!"
+                    );
+                    e.printStackTrace();
                 }
-            } catch (Exception e)
-            { 
-                System.out.println(
-                    "Could not send frame to io.rastered.video!"
-                );
-                e.printStackTrace();
-            }
+            } }
 	}
 }

@@ -2,8 +2,8 @@ io/rastered/app/service/PushImageServlet.class
 io/rastered/app/core/Presets.class
 io/rastered/app/service/FilterServlet.class
 io/rastered/app/core/SimpleFilterFunction.class
-io/rastered/app/core/FilterFunction.class
 io/rastered/app/service/ImageProcessor.class
+io/rastered/app/core/FilterFunction.class
 io/rastered/app/core/Texture$PixelFormat.class
 io/rastered/app/filters/RequestFilter.class
 io/rastered/app/core/FilterParameters.class
