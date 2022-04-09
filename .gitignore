@@ -1,0 +1,5 @@
+rastered.io/apache-tomcat-10.0.5/webapps/docs/**
+rastered.io/apache-tomcat-10.0.5/webapps/examples/**
+rastered.io/apache-tomcat-10.0.5/logs/**
+rastered-frontend/node_modules/**
+
