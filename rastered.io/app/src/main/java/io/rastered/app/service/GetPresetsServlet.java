@@ -1,7 +1,6 @@
 package io.rastered.app.service;
 
 import io.rastered.app.core.Presets;
-import java.io.IOException;
 import java.util.Arrays;
 import jakarta.json.Json;
 import jakarta.servlet.ServletException;
@@ -16,21 +15,31 @@ public class GetPresetsServlet extends HttpServlet
     @Override
     public void init()
     {
-        var jsonFilterListBuilder = Json.createObjectBuilder();
+        var jsonPresetBuilder = Json.createObjectBuilder();
+        var jsonPresetArrayBuilder = Json.createArrayBuilder();
+        
         Arrays.stream( Presets.values() )
             .forEachOrdered( (filterPreset) -> {
-                jsonFilterListBuilder.add( filterPreset.name(),
-                    filterPreset.getUserFacingName()
+                jsonPresetBuilder.add(
+                        "internalName", filterPreset.name()
+                ).add(
+                        "friendlyName", filterPreset.getUserFacingName()
                 );
+                jsonPresetArrayBuilder.add( jsonPresetBuilder.build() );
             }
         );
-        jsonFilterList = jsonFilterListBuilder.build().toString();
+        
+        jsonFilterList = jsonPresetArrayBuilder.build().toString();
     }
     
     @Override
     protected void doGet(HttpServletRequest request, 
-        HttpServletResponse response) throws ServletException, IOException 
+        HttpServletResponse response) throws ServletException
     {
-        response.getWriter().print( jsonFilterList );
+        try ( var responseWriter = response.getWriter() ) {
+            responseWriter.print( jsonFilterList );
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
     }
 }
