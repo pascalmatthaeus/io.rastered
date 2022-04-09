@@ -21,7 +21,7 @@ function App() {
 		async function fetchStreamKey() {
 			const response = await fetch("https://app.rastered.io/filter",
 				{ method:"POST",
-				credentials:"include"}
+				credentials:"include" }
 			);
 			const responseJson = await response.json();
 			const sk = await responseJson.streamKey;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Form, FormControl } from "react-bootstrap";
 import styled from "styled-components/macro";
 import { createGlobalStyle } from "styled-components";
 import { SessionBtn } from "./sessionbtn";
@@ -7,6 +6,7 @@ import { FilterDetails } from "./filterdetails";
 import { VideoPlayer } from "./videoplayer";
 import { Loader } from "./spinner";
 import { Dropzone } from "./dropzone";
+import { PresetList } from "./presetlist";
 import { Error } from "./error";
 
 export const GlobalTheme = createGlobalStyle`
@@ -135,7 +135,7 @@ const Tabbar = (props) => {
 const ViewSwitch = (props) => {
 	switch(props.tabSelected) {
 		case '0': return(<UploadView triggerNextView={props.triggerNextView}/>);
-		case '1': return(<></>);
+		case '1': return(<PipelineView/>);
 		case '2': return(<EditorView fetchFinished={props.fetchFinished} streamKey={props.streamKey}/>);
 		default: return null;
 	};
@@ -145,6 +145,14 @@ const UploadView = (props) => {
 	return(
 		<DocumentCard>
 			<Dropzone triggerNextView={props.triggerNextView}/>
+		</DocumentCard>
+	);
+};
+
+const PipelineView = (props) => {
+	return(
+		<DocumentCard>
+			<PresetList/>
 		</DocumentCard>
 	);
 };

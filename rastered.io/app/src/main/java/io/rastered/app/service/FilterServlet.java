@@ -39,7 +39,7 @@ public class FilterServlet extends HttpServlet {
             try 
             {
                 testBitmap = new Texture( ImageIO.read(
-                    new File("/home/sk/Pictures/lenna.bmp")
+                    new File("/home/pascal/Pictures/lenna.bmp")
                 ));
             } catch (Exception e) { e.printStackTrace(); }
         }
@@ -99,7 +99,8 @@ public class FilterServlet extends HttpServlet {
                 paramList = paramFetch;
             
             var sk = (Integer)session.getAttribute("streamkey");
-            /*if (sk != null) 
+            
+            if (sk != null) 
             {
                 response.setContentType("application/json");
                 response.setCharacterEncoding("utf-8");
@@ -107,26 +108,8 @@ public class FilterServlet extends HttpServlet {
                         "streamKey", sk.toString())
                         .build()
                         .toString()));
-            }*/
-            
-            // testing here...
-            var jsonResponseBuilder = Json.createObjectBuilder();
-            if (sk != null) {
-                response.setContentType("application/json");
-                response.setCharacterEncoding("utf-8");
-                jsonResponseBuilder.add("streamKey", sk.toString());
             }
-            Arrays.stream(Presets.values())
-                .forEach( (filterEnum) -> { 
-                        jsonResponseBuilder.add(
-                            filterEnum.name(),filterEnum.getUserFacingName()
-                        );
-                    }
-                );
             
-            response.getWriter().print(
-                    jsonResponseBuilder.build().toString()
-                );
             synchronized(sessionTexture) { synchronized(sessionSocket) {
                 sessionTexture.sampleFrom(sessionTexture.getOriginalData());
                 boolean allArgsGiven = paramList.length == 3;
