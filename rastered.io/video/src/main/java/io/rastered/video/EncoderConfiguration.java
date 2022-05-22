@@ -181,7 +181,7 @@ public class EncoderConfiguration
         
         parameterList.set (
                 parameterList.indexOf("placeholder_streamkey"),
-                "rtmp://127.0.0.1:1935/app/stream" + this.streamKey
+                "rtmp://ome:1935/app/stream" + this.streamKey
         );
         
         parameterList.set (

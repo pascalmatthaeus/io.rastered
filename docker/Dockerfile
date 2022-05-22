@@ -3,7 +3,7 @@ WORKDIR /
 RUN apk update
 RUN apk upgrade
 RUN apk add git
-RUN git clone https://github.com/pascalmatthaeus/io.rastered
+RUN git clone -b docker  https://github.com/pascalmatthaeus/io.rastered
 RUN apk add openjdk17-jre-headless
 RUN mkdir /tomcat
 WORKDIR /tomcat
@@ -25,4 +25,6 @@ RUN apk add nodejs && apk add npm && npm install
 EXPOSE 8080
 EXPOSE 3000
 
-ENTRYPOINT /tomcat/apache-tomcat-10.0.21/bin/catalina.sh run
+ENTRYPOINT java -jar /io.rastered/rastered.io/video/target/video-0.1.jar \
+           & /tomcat/apache-tomcat-10.0.21/bin/catalina.sh run \
+           & npm start --prefix /io.rastered/rastered-frontend
