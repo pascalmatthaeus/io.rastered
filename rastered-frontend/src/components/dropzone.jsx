@@ -186,7 +186,7 @@ export const Dropzone = (props) =>
 				}, 1000
 			);
 		};
-		xhr.open("POST","https://app.rastered.io/push",true);
+		xhr.open("POST","http://127.0.0.1:8080/push",true);
 		xhr.setRequestHeader("Content-Type","application/octet-stream");
 		xhr.withCredentials = true;
 		xhr.send(file);

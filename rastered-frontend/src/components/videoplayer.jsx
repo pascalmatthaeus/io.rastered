@@ -22,7 +22,7 @@ export const VideoPlayer = (props) => {
 			let webrtcSources = await [
 			  {
 				type: "webrtc",
-				file: "wss://stream.rastered.io:3334/app/stream"+props.streamKey,
+				file: "ws://127.0.0.1:3333/app/stream"+props.streamKey,
 				label: "Viewport",
 			  },
 			];

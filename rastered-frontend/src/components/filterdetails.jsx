@@ -47,7 +47,7 @@ export const FilterDetails = (props) => {
 
 	const postParameters = () => {
 		fetch(
-			"https://app.rastered.io/filter?valGam=" +
+			"http://127.0.0.1:8080/filter?valGam=" +
 			parameters.params[0] +
 			"&valExp=" +
 			parameters.params[1] +

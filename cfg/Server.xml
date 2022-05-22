@@ -72,7 +72,7 @@
 				<Signalling>
 					<!-- Port>${env:OME_SIGNALLING_PORT:3333}</Port-->
 					<WorkerCount>1</WorkerCount>
-					<TLSPort>3334</TLSPort>
+					<Port>3333</Port>
 				</Signalling>
 				<IceCandidates>
 					<TcpRelay>${env:OME_TCP_RELAY_ADDRESS:*:3478}</TcpRelay>
@@ -102,11 +102,11 @@
 					<Name>localhost</Name>
 					<Name>192.168.188.38</Name>
 				</Names>
-				<TLS>
+				<!-- TLS>
 					<CertPath>/opt/ovenmediaengine/bin/cert.pem</CertPath>
 					<KeyPath>/opt/ovenmediaengine/bin/privkey.pem</KeyPath>
 					<ChainCertPath>/opt/ovenmediaengine/bin/fullchain.pem</ChainCertPath>
-				</TLS>
+				</TLS -->
 			</Host>
 
 			<!-- Refer https://airensoft.gitbook.io/ovenmediaengine/signedpolicy

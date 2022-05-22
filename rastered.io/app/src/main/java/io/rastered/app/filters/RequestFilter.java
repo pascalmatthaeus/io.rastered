@@ -29,7 +29,7 @@ public class RequestFilter implements Filter
             "true"
         );
         response.addHeader("Access-Control-Allow-Origin", 
-            "https://rastered.io"
+            "http://127.0.0.1:3000"
         );
         response.addHeader(
             "Access-Control-Allow-Headers",

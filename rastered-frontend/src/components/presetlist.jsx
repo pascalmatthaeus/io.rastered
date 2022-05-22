@@ -184,7 +184,7 @@ export const PresetList = (props) =>
 	const [presets,setPresets] = useState([{}]);
 
 	useEffect ( async () => {
-		const response = await fetch("https://app.rastered.io/getpresets");
+		const response = await fetch("http://127.0.0.1:8080/getpresets");
 		let json = await response.json();
 		await json.map( (p,idx) => {
 			p.active = false;

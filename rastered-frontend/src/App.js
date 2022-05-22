@@ -19,7 +19,7 @@ function App() {
 	const [fetchHasFinished,setFetchHasFinished] = useState(false);
 	useEffect( async () => {
 		async function fetchStreamKey() {
-			const response = await fetch("https://app.rastered.io/filter",
+			const response = await fetch("http://127.0.0.1:8080/filter",
 				{ method:"POST",
 				credentials:"include" }
 			);
