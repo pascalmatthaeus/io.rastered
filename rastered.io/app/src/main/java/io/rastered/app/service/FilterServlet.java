@@ -19,14 +19,11 @@ import java.util.Arrays;
 // improve how session parameters are handled, consider filter descriptions
 // (e.g. sub-package with abstract class ImageFilterFunction( FilterBehaviour f, 
 // String description ) or local path on server or other source 
-// (e.g. another server). Putting dead code inside a separate file is
-// one step towards making source more readable.
 
 public class FilterServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
         
-        // Request parameters removed here for thread safety.
         // Fields declared here are not thread safe, single shared instance.
         protected String pathToWeb;
         protected volatile Texture testBitmap;
