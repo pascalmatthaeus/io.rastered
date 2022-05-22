@@ -2,7 +2,7 @@ version: '3'
 
 services:
   rio:
-    image: pascalmatthaeus/io.rastered:0.1
+    image: pascalmatthaeus/io.rastered:latest
     ports:
       - "8080:8080"
       - "3000:3000"
@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
 
   ome:
-    image: pascalmatthaeus/io.rastered.stream:0.1
+    image: pascalmatthaeus/io.rastered.stream:latest
     ports:
       - "3333:3333"
       - "3478:3478"

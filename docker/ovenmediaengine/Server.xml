@@ -100,7 +100,7 @@
 					<Name>stream.rastered.io</Name>
 					<Name>127.0.0.1</Name>
 					<Name>localhost</Name>
-					<Name>192.168.188.38</Name>
+					<Name>ome</Name>
 				</Names>
 				<!-- TLS>
 					<CertPath>/opt/ovenmediaengine/bin/cert.pem</CertPath>

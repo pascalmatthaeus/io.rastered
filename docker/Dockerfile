@@ -3,6 +3,7 @@ WORKDIR /
 RUN apk update
 RUN apk upgrade
 RUN apk add git
+RUN apk add ffmpeg
 RUN git clone -b docker  https://github.com/pascalmatthaeus/io.rastered
 RUN apk add openjdk17-jre-headless
 RUN mkdir /tomcat
